@@ -27,6 +27,7 @@ const Chats = () => {
     useEffect(() => {
         if (!user || user === null) {
             history.push("/");
+            return ;
         }
         axios.get('https://api.chatengine.io/users/me/', {
             headers: {
